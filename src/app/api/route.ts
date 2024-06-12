@@ -37,7 +37,7 @@ export const POST = async (request: NextRequest) => {
   }
 };
 
-export const DELETE = async (request: NextRequest) => {
+export const DELETE = async () => {
   try {
     await Todo.deleteMany({})
     return NextResponse.json({ msg: "All todos cleared successfully", success: true });
